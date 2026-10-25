@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17773105542"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,19 +20,28 @@
       'currency': 'GBP'
     });
   });
+  // Load the Google tag library after the page has rendered (faster first paint)
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17773105542';
+      document.head.appendChild(s);
+    }, 1500);
+  });
 </script>
 
-  <title>Nissan Qashqai Timing Chain Replacement £1100 | 1.2 &amp; 1.3 DIG-T | Plumstead SE18</title>
+  <title>Qashqai Timing Chain Replacement £1100 | Plumstead</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="nZ12bT2FpVQL2WcB2jcQEPGG07lqzJ8wiZ8Dq6DLVIk" />
-  <meta name="description" content="Nissan Qashqai 1.2 DIG-T &amp; 1.3 DIG-T petrol timing chain replacement in South-East London (Plumstead). Fixed price £1100 including chain kit, labour, oil service and diagnostics. 6 months warranty. By appointment only.">
+  <meta name="description" content="Nissan Qashqai 1.2 &amp; 1.3 DIG-T timing chain replacement, £1100 with chain kit, oil service and diagnostics. 6-month warranty. Plumstead SE18.">
   <link rel="canonical" href="https://timingbeltspecialist.co.uk/nissan-qashqai-timing-chain/">
 
-  <meta property="og:title" content="Nissan Qashqai Timing Chain Replacement £1100 | 1.2 &amp; 1.3 DIG-T | Plumstead SE18">
-  <meta property="og:description" content="Nissan Qashqai 1.2 DIG-T &amp; 1.3 DIG-T petrol timing chain replacement in South-East London (Plumstead). Fixed price £1100 including chain kit, labour, oil service and diagnostics. 6 months warranty. By appointment only.">
+  <meta property="og:title" content="Qashqai Timing Chain Replacement £1100 | Plumstead">
+  <meta property="og:description" content="Nissan Qashqai 1.2 &amp; 1.3 DIG-T timing chain replacement, £1100 with chain kit, oil service and diagnostics. 6-month warranty. Plumstead SE18.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://timingbeltspecialist.co.uk/nissan-qashqai-timing-chain/">
-  <meta property="og:image" content="https://timingbeltspecialist.co.uk/images/nissan-qashqai-front.webp">
+  <meta property="og:image" content="https://timingbeltspecialist.co.uk/images/nissan-qashqai-front.webp" width="800" height="476">
 
   <script type="application/ld+json">
 {
@@ -135,7 +143,8 @@
 }
   </script>
 
-  <link rel="stylesheet" href="/assets/site.css?v=20261025">
+  <link rel="preload" as="image" href="/images/nissan-qashqai-front.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/site.css?v=20261025b">
 </head>
 <body>
   <div class="page">
@@ -249,19 +258,16 @@
 
         <!-- MAP & DIRECTIONS BLOCK -->
         <div class="map-card">
-          <h3 class="map-title">Map &amp; directions</h3>
+          <h2 class="map-title">Map &amp; directions</h2>
           <p class="map-sub">
             Located in Plumstead SE18, South-East London. <strong>Visits are strictly by appointment only.</strong>
           </p>
           <div class="map-frame-wrap">
-            <iframe
-              class="map-frame"
-              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d261.1613810232722!2d0.07753754117992326!3d51.48386017857046!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2suk!4v1764617768667!5m2!1suk!2suk"
-
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
+            <button type="button" class="map-load" data-src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d261.1613810232722!2d0.07753754117992326!3d51.48386017857046!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2suk!4v1764617768667!5m2!1suk!2suk">
+              <span class="map-load-pin">📍</span>
+              <span>Plumstead SE18 · South-East London</span>
+              <span class="map-load-cta">Tap to show map</span>
+            </button>
           </div>
           <div class="map-buttons">
             <a class="btn-primary btn-small"
@@ -281,7 +287,7 @@
       <aside class="hero-side">
         <div class="car-card">
           <div class="car-image-wrap">
-            <img src="/images/nissan-qashqai-front.webp" fetchpriority="high" width="1000" height="595"
+            <img src="/images/nissan-qashqai-front.webp" width="800" height="476" fetchpriority="high"
                  alt="Nissan Qashqai J11 – timing chain replacement in Plumstead, South-East London">
             <div class="car-tag">Nissan Qashqai J11</div>
             <div class="car-engine-tag">1.2 / 1.3 DIG-T timing chain</div>
@@ -294,7 +300,7 @@
         </div>
         <div class="car-card">
           <div class="car-image-wrap">
-            <img loading="lazy" src="/images/nissan-qashqai-13-digt-rear.webp" width="1000" height="652"
+            <img loading="lazy" src="/images/nissan-qashqai-13-digt-rear.webp" width="800" height="522"
                  alt="Nissan Qashqai 1.3 DIG-T petrol">
             <div class="car-tag">1.3 DIG-T petrol</div>
             <div class="car-engine-tag">Chain kit included</div>
@@ -489,6 +495,20 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    document.querySelectorAll('.map-load').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.className = 'map-frame';
+        f.src = b.dataset.src;
+        f.title = 'Map – Plumstead SE18, South-East London';
+        f.loading = 'lazy';
+        f.referrerPolicy = 'no-referrer-when-downgrade';
+        f.allowFullscreen = true;
+        b.replaceWith(f);
+      });
+    });
   </script>
 </body>
 </html>

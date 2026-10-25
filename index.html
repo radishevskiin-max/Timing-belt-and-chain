@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17773105542"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,16 +20,25 @@
       'currency': 'GBP'
     });
   });
+  // Load the Google tag library after the page has rendered (faster first paint)
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17773105542';
+      document.head.appendChild(s);
+    }, 1500);
+  });
 </script>
 
-  <title>Timing Belt &amp; Chain Specialist Plumstead SE18 | Peugeot 208 £700, Nissan Qashqai £1100</title>
+  <title>Timing Belt &amp; Chain Specialist SE18 | Plumstead Garage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="nZ12bT2FpVQL2WcB2jcQEPGG07lqzJ8wiZ8Dq6DLVIk" />
-  <meta name="description" content="Independent timing belt and timing chain specialist in Plumstead, South-East London. Fixed prices: Peugeot 208 PureTech timing belt £700, Nissan Qashqai 1.2/1.3 DIG-T timing chain £1100. By appointment only.">
+  <meta name="description" content="Fixed-price timing belt &amp; chain replacement in Plumstead, SE London. Peugeot 208 PureTech £700, Nissan Qashqai DIG-T £1100. By appointment.">
   <link rel="canonical" href="https://timingbeltspecialist.co.uk/">
 
-  <meta property="og:title" content="Timing Belt &amp; Chain Specialist Plumstead SE18 | Peugeot 208 £700, Nissan Qashqai £1100">
-  <meta property="og:description" content="Independent timing belt and timing chain specialist in Plumstead, South-East London. Fixed prices: Peugeot 208 PureTech timing belt £700, Nissan Qashqai 1.2/1.3 DIG-T timing chain £1100. By appointment only.">
+  <meta property="og:title" content="Timing Belt &amp; Chain Specialist SE18 | Plumstead Garage">
+  <meta property="og:description" content="Fixed-price timing belt &amp; chain replacement in Plumstead, SE London. Peugeot 208 PureTech £700, Nissan Qashqai DIG-T £1100. By appointment.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://timingbeltspecialist.co.uk/">
   <meta property="og:image" content="https://timingbeltspecialist.co.uk/images/peugeot-208-front.jpg">
@@ -87,7 +95,7 @@
 }
   </script>
 
-  <link rel="stylesheet" href="/assets/site.css?v=20261025">
+  <link rel="stylesheet" href="/assets/site.css?v=20261025b">
 </head>
 <body>
   <div class="page">
@@ -144,7 +152,7 @@
 
     <section class="offer-grid">
       <a class="offer-card" href="/peugeot-208-timing-belt/">
-        <img src="/images/peugeot-208-front.jpg" alt="Peugeot 208 in South-East London" loading="lazy">
+        <img src="/images/peugeot-208-front.webp" width="640" height="640" alt="Peugeot 208 in South-East London" loading="lazy">
         <div class="offer-body">
           <div class="offer-kicker">Peugeot 208 · 1.0 &amp; 1.2 PureTech</div>
           <h2 class="offer-title">Timing belt replacement – all-inclusive</h2>
@@ -154,7 +162,7 @@
         </div>
       </a>
       <a class="offer-card" href="/nissan-qashqai-timing-chain/">
-        <img src="/images/nissan-qashqai-front.webp" alt="Nissan Qashqai J11" loading="lazy">
+        <img src="/images/nissan-qashqai-front.webp" width="800" height="476" alt="Nissan Qashqai J11" loading="lazy">
         <div class="offer-body">
           <div class="offer-kicker">Nissan Qashqai · 1.2 &amp; 1.3 DIG-T petrol</div>
           <h2 class="offer-title">Timing chain replacement – chain kit included</h2>
@@ -207,19 +215,16 @@
           <div>
         <!-- MAP & DIRECTIONS BLOCK -->
             <div class="map-card">
-          <h3 class="map-title">Map &amp; directions</h3>
+          <h2 class="map-title">Map &amp; directions</h2>
           <p class="map-sub">
             Located in Plumstead SE18, South-East London. <strong>Visits are strictly by appointment only.</strong>
           </p>
           <div class="map-frame-wrap">
-            <iframe
-              class="map-frame"
-              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d261.1613810232722!2d0.07753754117992326!3d51.48386017857046!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2suk!4v1764617768667!5m2!1suk!2suk"
-
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
+            <button type="button" class="map-load" data-src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d261.1613810232722!2d0.07753754117992326!3d51.48386017857046!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2suk!4v1764617768667!5m2!1suk!2suk">
+              <span class="map-load-pin">📍</span>
+              <span>Plumstead SE18 · South-East London</span>
+              <span class="map-load-cta">Tap to show map</span>
+            </button>
           </div>
           <div class="map-buttons">
             <a class="btn-primary btn-small"
@@ -285,6 +290,20 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    document.querySelectorAll('.map-load').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.className = 'map-frame';
+        f.src = b.dataset.src;
+        f.title = 'Map – Plumstead SE18, South-East London';
+        f.loading = 'lazy';
+        f.referrerPolicy = 'no-referrer-when-downgrade';
+        f.allowFullscreen = true;
+        b.replaceWith(f);
+      });
+    });
   </script>
 </body>
 </html>
