@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17773105542"></script>
 <script>
@@ -9,15 +10,16 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-17773105542');
-</script>
 
-  <meta charset="UTF-8">
-  <!-- Event snippet for Перегляд сторінки conversion page -->
-<script>
-  gtag('event', 'conversion', {
+  // Conversion only on phone / WhatsApp clicks (not on page view)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+    if (!a) return;
+    gtag('event', 'conversion', {
       'send_to': 'AW-17773105542/rnKxCNnJycwbEIaj8JpC',
       'value': 1.0,
       'currency': 'GBP'
+    });
   });
 </script>
 
@@ -27,16 +29,16 @@
   <!-- Basic SEO -->
   <meta name="description"
         content="Peugeot 208 1.0 & 1.2 PureTech timing belt replacement in South-East London (Plumstead). All-inclusive service for £700: timing belt kit, crank bolt, service, rocker cover gasket, oil sump & strainer cleaning, VVT solenoids, diagnostics. 6 months warranty. By appointment only.">
-  <meta name="keywords"
-        content="Peugeot 208 timing belt, puretech timing belt, Peugeot 208 1.2 timing belt replacement, timing belt kit, South East London garage, Plumstead independent garage, cambelt replacement Peugeot 208, by appointment only">
+
+  <link rel="canonical" href="https://timingbeltspecialist.co.uk/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Peugeot 208 Timing Belt Specialist – All-Inclusive £700 (By Appointment Only)">
   <meta property="og:description"
         content="All-inclusive Peugeot 208 1.0 & 1.2 PureTech timing belt replacement in Plumstead, South-East London. Parts + labour + service for £700. 6 months warranty. By appointment only.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://YOUR-DOMAIN/">
-  <meta property="og:image" content="https://YOUR-DOMAIN/images/peugeot-208-front.jpg">
+  <meta property="og:url" content="https://timingbeltspecialist.co.uk/">
+  <meta property="og:image" content="https://timingbeltspecialist.co.uk/images/peugeot-208-front.jpg">
 
   <!-- JSON-LD LocalBusiness / AutoRepair schema -->
   <script type="application/ld+json">
@@ -45,7 +47,8 @@
     "@type": "AutoRepair",
     "name": "PureTech Independent Garage - Plumstead",
     "description": "Independent garage in South-East London (Plumstead) specialising in Peugeot 208 1.0 & 1.2 PureTech timing belt replacement. By appointment only.",
-    "url": "https://YOUR-DOMAIN/",
+    "url": "https://timingbeltspecialist.co.uk/",
+    "image": "https://timingbeltspecialist.co.uk/images/peugeot-208-front.jpg",
     "telephone": "+447443822834",
     "priceRange": "££",
     "address": {
@@ -80,7 +83,7 @@
       "price": "700.00",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "https://YOUR-DOMAIN/#peugeot-208-timing-belt"
+      "url": "https://timingbeltspecialist.co.uk/#peugeot-208-timing-belt"
     }
   }
   </script>
@@ -998,7 +1001,7 @@
         <div class="car-card">
           <div class="car-image-wrap">
             <!-- внешний вид авто, номер затёрт на самом фото -->
-            <img src="images/peugeot-208-front.jpg"
+            <img src="images/peugeot-208-front.jpg" fetchpriority="high"
                  alt="Peugeot 208 2015 in South-East London after timing belt replacement">
             <div class="car-tag">Peugeot 208 · 2012–2019</div>
             <div class="car-engine-tag">1.0 / 1.2 PureTech timing belt</div>
@@ -1010,7 +1013,7 @@
         </div>
         <div class="car-card">
           <div class="car-image-wrap">
-            <img src="images/peugeot-208-cams-1.jpg"
+            <img loading="lazy" src="images/peugeot-208-cams-1.webp"
                  alt="Peugeot 208 1.2 PureTech camshafts during timing belt replacement">
             <div class="car-tag">PureTech specialist</div>
             <div class="car-engine-tag">Oil system &amp; VVT cleaning</div>
@@ -1106,11 +1109,11 @@
                   Photos from real timing belt and top-end work carried out on Peugeot 208 PureTech engines.
                 </p>
                 <div class="engine-gallery">
-                  <img src="images/peugeot-208-belt-drive.jpg"
+                  <img loading="lazy" src="images/peugeot-208-belt-drive.webp"
                        alt="Peugeot 208 auxiliary belt and pulleys before service">
-                  <img src="images/peugeot-208-cams-1.jpg"
+                  <img loading="lazy" src="images/peugeot-208-cams-1.webp"
                        alt="Peugeot 208 1.2 PureTech camshafts with rocker cover removed">
-                  <img src="images/peugeot-208-cams-2.jpg"
+                  <img loading="lazy" src="images/peugeot-208-cams-2.webp"
                        alt="Peugeot 208 PureTech timing belt area during repair">
                 </div>
               </article>
