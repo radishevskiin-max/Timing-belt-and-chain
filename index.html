@@ -9,6 +9,25 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-17773105542');
+  gtag('config', 'G-L1YW1BWYSL');
+
+  // Visits from AI assistants (ChatGPT, Perplexity, Gemini, Copilot, Claude...) -> GA4 event "ai_referral"
+  var aiSource = (function () {
+    var AI = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|gemini\.google\.com|bard\.google\.com|copilot\.microsoft\.com|copilot\.cloud\.microsoft|you\.com|poe\.com|meta\.ai|deepseek\.com|grok\.com|mistral\.ai)$/i;
+    var src = '';
+    try {
+      var utm = new URLSearchParams(location.search).get('utm_source') || '';
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (AI.test(utm)) src = utm.toLowerCase();
+      else if (AI.test(ref)) src = ref.toLowerCase();
+      if (src) sessionStorage.setItem('ai_source', src);
+      else src = sessionStorage.getItem('ai_source') || '';
+    } catch (err) {}
+    return src;
+  })();
+  if (aiSource && !document.referrer.match(/timingbeltspecialist\.co\.uk/)) {
+    gtag('event', 'ai_referral', { send_to: 'G-L1YW1BWYSL', ai_source: aiSource });
+  }
 
   // Conversion only on phone / WhatsApp clicks (not on page view)
   document.addEventListener('click', function (e) {
@@ -18,6 +37,11 @@
       'send_to': 'AW-17773105542/rnKxCNnJycwbEIaj8JpC',
       'value': 1.0,
       'currency': 'GBP'
+    });
+    gtag('event', 'contact_click', {
+      send_to: 'G-L1YW1BWYSL',
+      method: a.href.indexOf('wa.me/') > -1 ? 'whatsapp' : 'phone',
+      ai_source: aiSource || '(none)'
     });
   });
   // Load the Google tag library after the page has rendered (faster first paint)
