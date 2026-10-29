@@ -101,7 +101,7 @@
       "sameAs": [
         "https://maps.google.com/?cid=15946020205041556863"
       ],
-      "areaServed": "South-East London, Plumstead, Woolwich, Abbey Wood, Thamesmead",
+      "areaServed": ["Plumstead", "Woolwich", "Shooters Hill", "Charlton", "Abbey Wood", "Welling", "Thamesmead", "Eltham", "Belvedere", "Bexleyheath", "Greenwich", "Erith", "South-East London"],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -182,6 +182,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Usually one working day. We work by appointment only, so please book in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the garage and how do I get there?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are on Vicarage Road, Plumstead, London SE18 7ST – a 16-minute walk from Plumstead station and 20 minutes from Woolwich Elizabeth line station. It is easy to reach from Woolwich, Abbey Wood, Thamesmead, Welling, Eltham, Charlton and Bexleyheath. Visits are by appointment only, so please message us on WhatsApp before coming."
           }
         }
       ]
@@ -878,6 +886,10 @@ background: radial-gradient(circle at 30% 30%, rgba(249,115,22,.25), transparent
 .map-load-pin { font-size: 28px; }
 .map-load-cta { font-size: 13px; color: #fdba74; text-decoration: underline; }
 img { height: auto; }
+/* ---- location facts 2026-10-29 ---- */
+.map-facts { list-style: none; margin: 0 0 10px; padding: 0; font-size: 12px; color: var(--muted); }
+.map-facts li { position: relative; padding-left: 14px; margin: 3px 0; }
+.map-facts li::before { content: "•"; position: absolute; left: 2px; color: #fdba74; }
   </style>
 </head>
 <body>
@@ -1003,8 +1015,13 @@ img { height: auto; }
         <div class="map-card">
           <h2 class="map-title">Map &amp; directions</h2>
           <p class="map-sub">
-            Located in Plumstead SE18, South-East London. <strong>Visits are strictly by appointment only.</strong>
+            <strong>Vicarage Road, Plumstead, London SE18 7ST.</strong> Visits are <strong>strictly by appointment only</strong>.
           </p>
+          <ul class="map-facts">
+            <li>16 min walk (0.7 mile) from Plumstead station, 20 min walk from Woolwich Elizabeth line station</li>
+            <li>Within about 4.5 miles: Woolwich, Shooters Hill, Charlton, Abbey Wood, Welling, Thamesmead, Eltham, Belvedere, Bexleyheath, Greenwich and Erith</li>
+            <li>Open Monday–Saturday, 09:00–18:00</li>
+          </ul>
           <div class="map-frame-wrap">
             <button type="button" class="map-load" data-src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d261.1613810232722!2d0.07753754117992326!3d51.48386017857046!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2suk!4v1764617768667!5m2!1suk!2suk">
                           <span class="map-load-pin">📍</span>
@@ -1280,6 +1297,10 @@ img { height: auto; }
                   <details>
                     <summary>How long does the job take?</summary>
                     <p>Usually one working day. We work by appointment only, so please book in advance.</p>
+                  </details>
+                  <details>
+                    <summary>Where is the garage and how do I get there?</summary>
+                    <p>We are on Vicarage Road, Plumstead, London SE18 7ST – a 16-minute walk from Plumstead station and 20 minutes from Woolwich Elizabeth line station. It is easy to reach from Woolwich, Abbey Wood, Thamesmead, Welling, Eltham, Charlton and Bexleyheath. Visits are by appointment only, so please message us on WhatsApp before coming.</p>
                   </details>
               </article>
               <article class="card contact-card">
